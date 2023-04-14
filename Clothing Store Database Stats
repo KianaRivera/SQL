@@ -1,0 +1,29 @@
+--Create a candy store database
+
+CREATE TABLE candy_store (id INTEGER PRIMARY KEY, item TEXT, price INTEGER ,aisle INTEGER, quantity INTEGER);
+
+INSERT INTO candy_store VALUES (1, "dark chocolate", 1.00, 3, 10);
+INSERT INTO candy_store VALUES (2, "milk chocolate", 1.00, 3, 20);
+INSERT INTO candy_store VALUES (3, "caramel", 2.00, 1, 15);
+INSERT INTO candy_store VALUES (4, "sour candy", 2.50, 2, 43);
+INSERT INTO candy_store VALUES (5, "peanut butter cups", 3.00, 3, 24);
+INSERT INTO candy_store VALUES (6, "cotton candy", 5.00, 1, 30);
+INSERT INTO candy_store VALUES (7, "lollipop", 0.50, 1, 100);
+INSERT INTO candy_store VALUES (8, "gummy bears", 2.00, 1, 62);
+INSERT INTO candy_store VALUES (9, "gummy worms", 2.00, 1, 25);
+INSERT INTO candy_store VALUES (10, "jawbreakers", 0.75, 2, 97);
+INSERT INTO candy_store VALUEs (11, "soda", 2.00, 4, 55);
+INSERT INTO candy_store VALUES (12, "white chocolate", 1.00, 3, 28);
+INSERT INTO candy_store VALUES (13, "jellybeans", 1.50, 4, 13);
+INSERT INTO candy_store VALUES (14, "mints", 1.00, 4, 22);
+INSERT INTO candy_store VALUES (15, "caramel corn", 5.00, 2, 12);
+
+--display the database ordered by price.
+SELECT * FROM candy_store 
+ORDER BY price desc;
+
+--what is the totle number of items in the candy store?
+SELECT SUM(quantity) FROM candy_store;
+
+--what is the average quantey of items in each aisle
+SELECT AVG(price)
